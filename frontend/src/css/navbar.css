@@ -1,0 +1,45 @@
+:root{
+    --black: rgb(12, 12, 13);
+}
+
+nav{
+    height: 56px;
+    background-color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > img{
+    height: 100%;
+    width:220px;
+}
+
+nav svg{
+    height: 56px;
+    border: 1px solid yellow;
+}
+
+nav > div > div{
+    display: none;
+    padding: 0px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: fixed;
+    right: 14px;
+    top: 54px;
+}
+
+nav > div > div > p{
+    padding: 12px;
+}
+
+nav > div > div > p:nth-child(1){
+    border-bottom: 1px solid black;
+}
+
+nav > div > div a{
+    color: black;
+    text-decoration: none;
+}
