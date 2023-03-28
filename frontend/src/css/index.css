@@ -1,0 +1,89 @@
+:root{
+    --black: rgb(12, 12, 13);
+    --searchwithoutHover: #1e87f0;
+    --search: #0f7ae5
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, 'poppins';
+}
+header{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+header > #container p{
+    font-size: 30px;
+    color:white
+}
+
+#container{
+    height: 80%;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .search-bar{
+    margin-top: 24px;
+    background-color: white;
+    width: 60%;
+    height: 56px;
+    padding: 24px;
+}
+
+#container .search-bar form{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container .search-bar form label{
+    height: 40px;
+    border: 1px solid rgb(144, 144, 144);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container .search-bar form label:nth-child(1){
+    width: 30%;
+}
+#container .search-bar form label:nth-child(2){
+    width: 20%;
+}
+#container .search-bar form label:nth-child(3){
+    width: 20%;
+}
+
+#container .search-bar form input{
+    border: none;
+    outline: none;
+    padding-left: 14px;
+}
+
+#container .search-bar form > input{
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: var(--searchwithoutHover);
+}
+
+#container .search-bar form > input:hover{
+    background-color: var(--search);
+}
+
+#container .search-bar form > select{
+    height: 40px;
+}
