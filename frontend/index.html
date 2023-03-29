@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripping.com | Book vacation rentals, holiday homes, homestays, villas, apartments and more</title>
-    <link rel="shortcut icon" type="x-icon" href="./imgs/fevicon.ico">
+    <link rel="shortcut icon" type="x-icon" href="./imgs/trip.jpg">
     <link rel="stylesheet" href="./src/css/index.css">
     <link rel="stylesheet" href="./src/css/navbar.css">
 </head>
@@ -14,59 +14,113 @@
 <body>
     <header>
         <nav>
-            <img src="./imgs/brand.png" alt="">
-            <div class="userInfo">
-                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="user">
-                    <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
-                    <path fill="none" stroke="white" stroke-width="1.1"
-                        d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
-                </svg>
-                <div class="">
-                    <p><a href="signup.html">SignUp</a></p>
-                    <p><a href="signin.html">SignIn</a></p>
+            <div class="brandLogo">
+                <img src="./imgs/brand.png" alt="">
+            </div>
+            <div class="right">
+                <div class="userInfo">
+                    <a href="userDashBoard.html">
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                            data-svg="user">
+                            <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
+                            <path fill="none" stroke="white" stroke-width="1.1"
+                                d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 24 24" width="64px">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" stroke="white" stroke-width='2' />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div class="login">
+                <p><a href="signup.html">SignUp</a></p>
+                <p><a href="signin.html">SignIn</a></p>
+            </div>
+            <div class="logout">
+                <p><a href="#">Signout</a></p>
+            </div>
+            <div class="hamburgerPart">
+                <span class="clearingHam">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" stroke="white" stroke-width="2"/>
+                    </svg>
+                </span>
+                <div class="section">
+                    <p class="heading">
+                        ARE YOU A PROPERTY OWNER/MANAGER?
+                    </p>
+                    <p>List New Property</p>
+                    <p>Sign In To Your Dashboard</p>
+                </div>
+                <div class="section">
+                    <p class="heading">
+                        HOLIDAY HOMES FOR SALE
+                    </p>
+                    <div class="innerDiv">
+                        <p class="subHeading">Tripping.com Managed</p>
+                        <p>Homes from A grade developer. Rentals guaranteed</p>
+                        <p class="subHeading">Marketplace</p>
+                        <p>See what homes are up for sale from different property owners.</p>
+                    </div>
+                    <div class="innerDiv">
+                        <p class="subHeading">About Us</p>
+                        <p class="subHeading">Privacy Policy</p>
+                        <p class="subHeading">Terms of Use</p>
+                        <p class="subHeading">FAQs</p>
+                        <p class="subHeading">Contact Us</p>
+                    </div>
+                    <p class="subHeading">&#169; Tripping Pte Ltd</p>
                 </div>
             </div>
         </nav>
         <div id="container">
             <div class="slogan">
                 <p>Book <del>Hotels</del> Vacation Rentals</p>
-            <p>Top Holiday Homes - Villas, Apartments & Homestays</p>
+                <p>Top Holiday Homes - Villas, Apartments & Homestays</p>
             </div>
             <div class="search-bar">
                 <form>
-                    
+
                     <label for="location">
                         <span>
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            data-svg="search">
-                            <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
-                            <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
-                        </svg>
-                    </span>
-                    <input type="text" id="location" placeholder="Location">
-                </label>
+                                data-svg="search">
+                                <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                                <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
+                            </svg>
+                        </span>
+                        <input type="text" id="location" placeholder="Location">
+                    </label>
                     <label for="checkIn">
                         <span>
                             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            data-svg="sign-in">
-                            <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
-                            <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
-                            </polygon>
-                        </svg>
-                    </span>
-                    <input type="date" id="checkIn">
-                </label>
+                                data-svg="sign-in">
+                                <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
+                                <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
+                                </polygon>
+                            </svg>
+                        </span>
+                        <input type="date" id="checkIn">
+                    </label>
                     <label for="checkOut">
                         <span>
-                            <svg width="20" height="20" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg" data-svg="sign-out">
-                            <polygon points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
-                            </polygon>
-                            <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3"></polygon>
-                        </svg>
-                    </span>
-                    <input type="date" id="checkOut">
-                </label>
+                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                data-svg="sign-out">
+                                <polygon
+                                    points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
+                                </polygon>
+                                <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3"></polygon>
+                            </svg>
+                        </span>
+                        <input type="date" id="checkOut">
+                    </label>
                     <select id="numberOfPeople">
                         <option value="">Select Guests</option>
                         <option value="1">1 Guest</option>
@@ -125,6 +179,7 @@
             </div>
         </div>
     </header>
+    <script src="./src/script/navbar.js"></script>
 </body>
 
 </html>
