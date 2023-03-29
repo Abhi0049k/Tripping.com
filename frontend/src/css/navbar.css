@@ -10,36 +10,119 @@ nav{
     align-items: center;
 }
 
-nav > img{
+nav > .brandLogo img{
     height: 100%;
     width:220px;
 }
 
-nav svg{
-    height: 56px;
-    border: 1px solid yellow;
+
+nav .right{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
 }
 
-nav > div > div{
+nav .userInfo{
+    height: 56px;
+    margin-right: 30px;
+}
+.userInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > nav .userInfo > a > p{
+    color: white;
+}
+
+header > nav .hamburger{
+    cursor: pointer;
+}
+
+nav > .login{
     display: none;
     padding: 0px 12px;
     text-align: center;
     background-color: white;
     color: black;
     position: fixed;
-    right: 14px;
+    right: 30px;
     top: 54px;
 }
 
-nav > div > div > p{
+nav > .logout{
+    display: none;
+    padding: 0px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: fixed;
+    right: 108px;
+    top: 54px;
+}
+
+nav > div > p{
     padding: 12px;
 }
 
-nav > div > div > p:nth-child(1){
+nav > div > p:nth-child(1){
     border-bottom: 1px solid black;
 }
 
-nav > div > div a{
+nav > div a{
     color: black;
     text-decoration: none;
+}
+
+
+.hamburgerPart{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 23%;
+    height: 100vh;
+    background-color: var(--black);
+    padding: 24px 40px;
+    line-height: 24px;
+}
+
+
+
+.hamburgerPart .section{
+    text-align: center;
+    color: #666666;
+    margin: 34px auto;
+}
+
+.hamburgerPart .clearingHam{
+    display: block;
+    display: flex;
+    justify-content: end;
+}
+
+.hamburgerPart .clearingHam svg{
+    cursor: pointer;
+}
+
+.hamburgerPart .section:nth-child(1){
+    padding: 10px;
+    border-bottom: 1px solid #666666;
+}
+
+.hamburgerPart .section:nth-child(1) .heading{
+    margin-bottom: 8px;
+}
+
+.hamburgerPart .section .innerDiv{
+    margin: 12px auto;
+    padding: 23px;
+    border-bottom: 1px solid #666666
+}
+
+.hamburgerPart .section .heading{
+    font-size: 13px;
+    color: white;
 }
