@@ -27,6 +27,7 @@ const gettingLoggedIn = async (obj) =>{
         window.location.href = 'index.html';
     }else{
         res = await res.json();
-        alert(res.msg);
+        let {err, msg} = res;
+        alert(err || msg);
     }
 }
