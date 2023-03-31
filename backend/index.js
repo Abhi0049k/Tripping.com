@@ -2,7 +2,8 @@ const express = require('express');
 const {connection} = require('./db');
 const { userRouter } = require('./routes/user.routes');
 const { placesRouter } = require('./routes/places.routes');
-const cors = require('cors')
+const cors = require('cors');
+const { bookingRouter } = require('./routes/booking.routes');
 require('dotenv').config();
 
 const app = express();
@@ -10,8 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
+
+app.use('/booking', bookingRouter);
 app.use('/user', userRouter);
-app.use('/places', placesRouter)
+app.use('/places', placesRouter);
 
 app.get('/', (req, res)=>{
     res.status(200).send({"msg": "Welcome to the home page"});
@@ -24,5 +27,5 @@ app.get('*', (req, res)=>{
 
 app.listen(process.env.port, ()=>{
     connection();
-    console.log('Server is running at port: ', process.env.port);
+    console.log('Server is running at port:', process.env.port);
 })
