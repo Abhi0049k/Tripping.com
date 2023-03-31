@@ -58,3 +58,16 @@ function removing(){
     africaPart.style.display= 'none';
     oceniaPart.style.display= 'none';
 }
+
+const formEl = document.querySelector('header > #container > .search-bar > form');
+const locationEl = document.querySelector('header > #container > .search-bar > form #location')
+const noofpeople = document.querySelector('header > #container > .search-bar > form #numberOfPeople')
+
+formEl.addEventListener('submit', (evnt)=>{
+    evnt.preventDefault();
+    let location = locationEl.value;
+    let peopleCount = noofpeople.value;
+    localStorage.setItem('queryloc', location);
+    localStorage.setItem('querycount', peopleCount);
+    window.location.href = 'searchResult.html';
+})

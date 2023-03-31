@@ -10,9 +10,12 @@ nav{
     align-items: center;
 }
 
+nav > .brandLogo {
+    height: 97%;
+}
+
 nav > .brandLogo img{
     height: 100%;
-    width:220px;
 }
 
 
@@ -33,11 +36,11 @@ nav .userInfo{
     align-items: center;
 }
 
-header > nav .userInfo > a > p{
+nav .userInfo > a > p{
     color: white;
 }
 
-header > nav .hamburger{
+nav .hamburger{
     cursor: pointer;
 }
 
@@ -45,7 +48,7 @@ nav > .login{
     display: none;
     padding: 0px 12px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(227, 227, 227);
     color: black;
     position: fixed;
     right: 30px;
@@ -56,7 +59,7 @@ nav > .logout{
     display: none;
     padding: 0px 12px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(227, 227, 227);
     color: black;
     position: fixed;
     right: 108px;

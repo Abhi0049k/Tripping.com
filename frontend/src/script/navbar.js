@@ -1,12 +1,12 @@
-const userInfo = document.querySelector('header > nav > .right .userInfo');
-const loginPart = document.querySelector('header > nav > .login')
-const logoutPart = document.querySelector('header > nav > .logout');
+const userInfo = document.querySelector('nav > .right .userInfo');
+const loginPart = document.querySelector('nav > .login')
+const logoutPart = document.querySelector('nav > .logout');
 const token = localStorage.getItem('token');
 const username = localStorage.getItem('username');
-const usernamePos = document.querySelector('header > nav > .right .userInfo > a')
-const hamIcon = document.querySelector('header > nav .hamburger span');
-const asideSection = document.querySelector('header > nav > .hamburgerPart');
-const clearHam = document.querySelector('header > nav > .hamburgerPart > .clearingHam > svg')
+const usernamePos = document.querySelector('nav > .right .userInfo > a')
+const hamIcon = document.querySelector('nav .hamburger span');
+const asideSection = document.querySelector('nav > .hamburgerPart');
+const clearHam = document.querySelector('nav > .hamburgerPart > .clearingHam > svg')
 
 window.addEventListener('load', ()=>{
     displayName();
@@ -67,7 +67,6 @@ const displayName=()=>{
 
 hamIcon.addEventListener('click', ()=>{
     asideSection.style.display = 'block'
-    console.log('working icon')
 })
 
 clearHam.addEventListener('click', ()=>{

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./src/css/admin.css">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="./src/css/searchResult.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
 </head>
 <body>
     <nav>
@@ -75,63 +76,22 @@
             </div>
         </div>
     </nav>
-    <section id="operations">
-        <aside id="functionalities">
-            <ul>
-                <li class="active">List</li>
-                <li>Add a Place</li>
-                <li>Booking</li>
-                <li>Stats</li>
-                <li>Sign Out</li>
-            </ul>
-        </aside>
-        <section id='appPlaces'class="active">
-            <h1>Locations</h1>
-            <div class="container">
+    <div id="searchResult">
+        <h3>Total 1 Results</h3>
+        <div id="container">
 
-            </div>
-        </section>
-        <section id="addingPlace">
-            <h1>Adding a New Place</h1>
-            <form id="creatingPlace">
-            <input type="text" placeholder="Enter your name" id="creationName">
-            <input type="text" placeholder="Enter image url" id="creationImages">
-            <input type="text" placeholder="Enter city, State and country" id="creationLocation">
-            <input type="text" placeholder="Enter facilities" id="creationFacilities">
-            <input type="text" placeholder="Enter day" id="creationDay">
-            <input type="text" placeholder="Booked or not" id="creationBooking">
-            <input type="text" placeholder="Enter People Count" id="creationMaximumCount">
-            <input type="text" placeholder="Enter rental" id="creationpricing">
-            <input type="text" placeholder="Enter discount" id="creationDiscount">
-            <input type="submit" value="Add">
-            </form>
-        </section>
-        <section id='totalBooking'class="active">
-            <h1>Locations</h1>
-            <div class="container">
-
-            </div>
-        </section>
-    </section>
-
-    <div id="deletion">
+        </div>
     </div>
-    <div id="updationForm">
-        <h3>Updating Info</h3>
+    <div id="bookingConfirming">
         <form>
-            <input type="text" placeholder="Enter your Id" disabled id="idEl">
-            <input type="text" placeholder="Enter your name" id="updationName">
-            <input type="text" placeholder="Enter image url" id="updationImages">
-            <input type="text" placeholder="Enter city, State and country" id="updationLocation">
-            <input type="text" placeholder="Enter facilities" id="updationFacilities">
-            <input type="text" placeholder="Enter day" id="updationDay">
-            <input type="text" placeholder="Booked or not" id="updationBooking">
-            <input type="text" placeholder="Enter People Count" id="updationMaximumCount">
-            <input type="text" placeholder="Enter rental" id="updationpricing">
-            <input type="text" placeholder="Enter discount" id="updationDiscount">
-            <input type="submit" value="Update">
+            <input type="text" placeholder="Enter your name" id="name">
+            <input type="text" placeholder="Enter your age" id="age">
+            <input type="email" placeholder="Enter your email" id="email">
+            <input type="number" placeholder="Enter your Aadhar No." id="idProof">
+            <input type="submit" value="Confirm Booking">
         </form>
     </div>
-    <script src="./src/script/admin.js"></script>
+    <script src="./src/script/navbar.js"></script>
+    <script src="./src/script/searchResult.js"></script>
 </body>
 </html>
