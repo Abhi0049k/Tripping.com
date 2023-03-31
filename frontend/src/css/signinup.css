@@ -25,12 +25,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(47, 40, 40);
+    color: rgb(47, 43, 43);
     background-color: white;
     border-radius: 10px;
 }
 
 #left p{
+    text-align: center;
     height: 500px;
 }
 
