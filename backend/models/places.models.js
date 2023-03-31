@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const placesSchema = mongoose.Schema({
+    name: String,
     images: [],
     location: String,
     facilities: [],

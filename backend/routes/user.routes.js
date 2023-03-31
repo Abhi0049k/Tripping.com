@@ -45,6 +45,21 @@ userRouter.post('/login', async(req, res)=>{
         res.status(400).send({"err": "Something went wrong"});
     }
 })
+userRouter.post('/admin/login', async(req, res)=>{
+    const data = req.body;
+    const secretKey = process.env.secretKey;
+    try{
+        const {email} = data;
+        const user = await userModel.findOne({email});
+        let result = await bcrypt.compare(data.password, user.password);
+        if(result && user.role=='admin')
+        res.status(200).send({"msg": "Login Successfully", "token": jwt.sign({userId: user._id}, secretKey), "username": `${user.name}`});
+        else
+        res.status(400).send({"msg": "Wrong Credentials"});
+    }catch(err){
+        res.status(400).send({"err": "Something went wrong"});
+    }
+})
 
 
 
