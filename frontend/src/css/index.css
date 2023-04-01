@@ -34,7 +34,7 @@ header > #container p{
 #container .search-bar{
     margin-top: 24px;
     background-color: white;
-    width: 60%;
+    width: 58%;
     height: 56px;
     padding: 24px;
 }
@@ -46,34 +46,26 @@ header > #container p{
     align-items: center;
 }
 
-#container .search-bar form label{
+#container .search-bar form div{
     height: 40px;
-    border: 1px solid rgb(144, 144, 144);
+    border: 1px solid rgb(194, 194, 194);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 0px 14px;
 }
 
-#container .search-bar form label:nth-child(1){
-    width: 30%;
-}
-#container .search-bar form label:nth-child(2){
-    width: 20%;
-}
-#container .search-bar form label:nth-child(3){
-    width: 20%;
-}
-
-#container .search-bar form input{
+#container .search-bar form input, #container .search-bar form select{
+    padding-left: 14px;
     border: none;
     outline: none;
-    padding-left: 14px;
 }
 
 #container .search-bar form > input{
     height: 40px;
     width: 120px;
     text-align: center;
+    padding-left: 0px;
     font-size: 16px;
     color: white;
     background-color: var(--searchwithoutHover);

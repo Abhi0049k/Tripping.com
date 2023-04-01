@@ -143,9 +143,6 @@ nav > div a{
 /* section */
 
 #operations{
-    border-radius: 4px;
-    margin: 4px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     display: flex;
     height: 90vh;
     padding: 23px;
@@ -192,14 +189,33 @@ nav > div a{
 #operations #appPlaces .container{
     margin: 14px auto;
     height: 90%;
-    overflow-y: scroll;
+}
+
+#operations #appPlaces .container div{
+    display: flex;
+    border:rgba(0, 0, 0, 0.2) 2px solid;
+    width: 50%;
+    align-items: center;
+    border-radius: 4px;
+    margin-top: 16px;
+}
+
+#operations #appPlaces .container div h2{
+    font-weight: 400;
+    width: 18%;
+    padding-left: 4px;
+}
+
+#operations #appPlaces .container div p{
+    width: 280px;
+    font-size: 20px;
 }
 
 #operations #appPlaces .container .card{
     display: flex;
     border-radius: 5px;
     margin: 14px 8px;
-    height: fit-content;
+    height: 156px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -235,72 +251,6 @@ nav > div a{
     font-weight: 500;
 }
 
-#operations #appPlaces .container .card .body .del{
-    background-color: rgba(255, 0, 0, 0.5);
-    border: 3px solid rgb(224, 0, 0);
-}
-
-#operations #appPlaces .container .card .body .edit{
-    background-color: rgba(255,255, 0, 0.5);
-    border: 3px solid yellow;
-}
-#operations #appPlaces .container .card .body .edit:hover{
-    background-color: rgba(255,255, 0, 0.9);
-}
-
-#operations #appPlaces .container .card .body .del:hover{
-    background-color: rgba(255, 0, 0, 0.9);
-}
-
-#operations #appPlaces .container .card img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-#operations #addingPlace{
-    border-radius: 5px;
-    padding: 24px 56px;
-    width: 70%;
-    display: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#operations #addingPlace h1{
-    font-weight: 400;
-    font-size: 28px;
-    margin-bottom: 14px;
-}
-
-#operations #addingPlace form{
-    display: flex;
-    flex-direction: column;
-    width: 36%;
-}
-
-#operations #addingPlace form input{
-    border: 1px solid silver;
-    height: 36px;
-    margin: 8px 0px;
-    outline: none;
-    padding-left: 14px;
-}
-
-#operations #addingPlace form input[type='submit']{
-    background-color: var(--searchwithoutHover);
-    border: none;
-    font-size: 16px;
-    color: white;
-}
-
-#operations #addingPlace form input[type='submit']:hover{
-    background-color: var(--search);
-}
-
 #operations > #totalBooking{
     display: none;
     border-radius: 5px;
@@ -322,14 +272,22 @@ nav > div a{
     height: 90%;
 }
 
+#operations > #totalBooking > .container h1{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+}
 
 #operations > #totalBooking > .container .eachbooking{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 47%;
-    height: fit-content;
-    border-radius: 4px;
     padding: 14px;
     margin: 12px;
+    height: fit-content;
     line-height: 24px;
 }
 
@@ -356,29 +314,6 @@ nav > div a{
     border-radius: 5px;
 }
 
-#operations #statistics{
-    display: none;
-    border-radius: 5px;
-    padding: 34px 56px;
-    width: 70%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-#operations #statistics h1{
-    font-weight: 400;
-    font-size: 26px;
-}
-
-#operations > #totalBooking > .container h1{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
-    font-size: 24px;
-}
-
 #deletion{
     display: none;
     position: fixed;
@@ -394,62 +329,3 @@ nav > div a{
     font-size: 24px;
 }
 
-
-#updationForm{
-    display: none;
-    padding: 24px;
-    width: 25%;
-    border-radius: 8px;
-    position: fixed;
-    top: 36px;
-    left: 550px;
-    background-color: whitesmoke;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-#updationForm h3{
-    font-weight: 400;
-}
-
-#updationForm form{
-    display: flex;
-    flex-direction: column;
-}
-
-#updationForm form input{
-    border: 1px solid silver;
-    height: 36px;
-    margin: 8px 0px;
-    outline: none;
-    padding-left: 14px;
-}
-
-#updationForm form input[type='submit']{
-    background-color: var(--searchwithoutHover);
-    border: none;
-    font-size: 16px;
-    color: white;
-}
-
-#updationForm form input[type='submit']:hover{
-    background-color: var(--search);
-}
-
-
-@media screen and (max-width: 860px) and (min-width: 455px){
-    #deletion{
-        left: 50px;
-    }
-    #updationForm{
-        left: 50px;
-    }
-    #operations > #functionalities{
-        padding: 24px;
-    }
-    #operations>  #functionalities ul li{
-        font-size: 20px;
-    }
-    #operations #addingPlace form{
-        width: 80%;
-    }
-}

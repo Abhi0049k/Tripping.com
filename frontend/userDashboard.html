@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="./src/css/userDashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="brandLogo">
+            <img src="./imgs/brand.png" alt="">
+        </div>
+        <div class="right">
+            <div class="userInfo">
+                <a href="#">
+                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                        data-svg="user">
+                        <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
+                        <path fill="none" stroke="white" stroke-width="1.1"
+                            d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 24 24" width="64px">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" stroke="white" stroke-width='2' />
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="login">
+            <p><a href="signup.html">SignUp</a></p>
+            <p><a href="signin.html">SignIn</a></p>
+        </div>
+        <div class="logout">
+            <p><a href="#">Signout</a></p>
+        </div>
+        <div class="hamburgerPart">
+            <span class="clearingHam">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" stroke="silver" stroke-width="2"/>
+                </svg>
+            </span>
+            <div class="section">
+                <p class="heading">
+                    ARE YOU A PROPERTY OWNER/MANAGER?
+                </p>
+                <p>List New Property</p>
+                <p>Sign In To Your Dashboard</p>
+            </div>
+            <div class="section">
+                <p class="heading">
+                    HOLIDAY HOMES FOR SALE
+                </p>
+                <div class="innerDiv">
+                    <p class="subHeading">Tripping.com Managed</p>
+                    <p>Homes from A grade developer. Rentals guaranteed</p>
+                    <p class="subHeading">Marketplace</p>
+                    <p>See what homes are up for sale from different property owners.</p>
+                </div>
+                <div class="innerDiv">
+                    <p class="subHeading">About Us</p>
+                    <p class="subHeading">Privacy Policy</p>
+                    <p class="subHeading">Terms of Use</p>
+                    <p class="subHeading">FAQs</p>
+                    <p class="subHeading">Contact Us</p>
+                </div>
+                <p class="subHeading">&#169; Tripping Pte Ltd</p>
+            </div>
+        </div>
+    </nav>
+    <section id="operations">
+        <aside id="functionalities">
+            <ul>
+                <li class="active">Account</li>
+                <li>Booking</li>
+                <li>Sign Out</li>
+            </ul>
+        </aside>
+        <section id='appPlaces'class="active">
+            <h1>User Details</h1>
+            <div class="container">
+            </div>
+        </section>
+        <section id='totalBooking'class="active">
+            <h1>Total Booking</h1>
+            <div class="container"></div>
+        </section>
+    </section>
+
+    <div id="deletion">
+    </div>
+    <script src="./src/script/userDashboard.js"></script>
+</body>
+</html>

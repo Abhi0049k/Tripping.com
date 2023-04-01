@@ -5,12 +5,16 @@ const { authorization } = require('../middlewares/authorization.middleware');
 const placesRouter = express.Router();
 
 placesRouter.get('/', async(req, res)=>{
-    const query = req.query;
+    const {query} = req.query;
     try{
-        const data = await placesModel.find();
+        let data;
+        if(query)
+        data = await placesModel.find({location: {$regex: query, $options: "i"}});
+        else
+        data = await placesModel.find();
         res.status(200).send(data);
     }catch(err){
-        console.log(err.message);
+        // console.log(err.message);
         res.status(400).send({"err": "Something went wrong!!!"});
     }
 })

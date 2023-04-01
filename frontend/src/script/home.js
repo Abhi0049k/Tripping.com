@@ -59,6 +59,8 @@ function removing(){
     oceniaPart.style.display= 'none';
 }
 
+// Search Bar 
+
 const formEl = document.querySelector('header > #container > .search-bar > form');
 const locationEl = document.querySelector('header > #container > .search-bar > form #location')
 const noofpeople = document.querySelector('header > #container > .search-bar > form #numberOfPeople')

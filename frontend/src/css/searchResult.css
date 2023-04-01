@@ -28,20 +28,29 @@
 #searchResult #container{
     margin: 14px 0px;
     height: 90%;
+    width: 844px;
     /* overflow-y: scroll; */
+}
+
+#searchResult #container h1{
+    font-weight: 400;
+    padding: 14px;
+    border-radius: 4px;
+    background-color: rgb(255, 0, 0, 0.4);
+    color: red;
 }
 
 #searchResult #container .card{
     display: flex;
     border-radius: 5px;
     margin: 14px 0px;
-    height: 300px;
+    height: fit-content;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 
 #searchResult #container .card .image{
-    width: 25%;
+    width: 340px;
 }
 
 #searchResult #container .card img{
@@ -53,6 +62,7 @@
 
 #searchResult #container .card .body{
     padding: 24px;
+    width: 556px;
     line-height: 34px;
 }
 
@@ -86,4 +96,70 @@
 
 #bookingConfirming{
     display: none;
+    position: fixed;
+    top: 85px;
+    left: 1000px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 26%;
+    padding: 24px;
+    border-radius: 5px;
+    background-color: rgb(234, 229, 229);
+}
+
+#bookingConfirming > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#bookingConfirming > div > h1{
+    font-weight: 400;
+}
+
+#bookingConfirming form label{
+    margin-bottom: 0px;
+}
+
+#bookingConfirming form input{
+    width: 100%;
+    margin: 14px 0px;
+    height: 44px;
+    padding: 0px 14px; 
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid silver;
+}
+
+#bookingConfirming form input[type='date']{
+    margin-top: 0px;
+}
+
+#bookingConfirming form input[type='submit']{
+    background-color: var(--searchwithoutHover);
+    color: white;
+    font-size: 18px;
+}
+
+#bookingConfirming form input[type='submit']:hover{
+    background-color: var(--search);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+#notification{
+    display: none;
+    position: fixed;
+    top: 136px;
+    left: 550px;
+    background-color: rgb(245, 243, 243);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 84px;
+    width: 560px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
 }

@@ -1,12 +1,18 @@
 const userInfo = document.querySelector('nav > .right .userInfo');
 const loginPart = document.querySelector('nav > .login')
 const logoutPart = document.querySelector('nav > .logout');
-const token = localStorage.getItem('token');
+const token = localStorage.getItem('token') || '';
 const username = localStorage.getItem('username');
 const usernamePos = document.querySelector('nav > .right .userInfo > a')
 const hamIcon = document.querySelector('nav .hamburger span');
 const asideSection = document.querySelector('nav > .hamburgerPart');
 const clearHam = document.querySelector('nav > .hamburgerPart > .clearingHam > svg')
+const logo = document.querySelector('nav > .brandLogo');
+
+
+logo.addEventListener('click', ()=>{
+    window.location.href = "index.html";
+})
 
 window.addEventListener('load', ()=>{
     displayName();
@@ -14,9 +20,9 @@ window.addEventListener('load', ()=>{
 
 logoutPart.addEventListener('click', (evnt)=>{
     evnt.preventDefault();
-    console.log('working fine a tag in html');
     localStorage.removeItem('token');
     localStorage.removeItem('username');
+    localStorage.removeItem('userId');
     window.location.href = 'index.html'
 })
 
@@ -58,9 +64,12 @@ const displayName=()=>{
                             d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
                     </svg>
     `
-    if(token)
-     usernamePos.innerHTML = `<p>${username}</p>`;
-     else{
+    if(token){
+        usernamePos.innerHTML = `<p>${username}</p>`;
+        usernamePos.addEventListener('click', ()=>{
+            window.location.href = 'userDashboard.html'
+        })
+    }else{
         usernamePos.innerHTML = defaultString;
      }
 }
