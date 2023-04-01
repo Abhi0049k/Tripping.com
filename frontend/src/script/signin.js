@@ -23,6 +23,7 @@ const gettingLoggedIn = async (obj) =>{
         res = await res.json();
         localStorage.setItem('token', res.token);
         localStorage.setItem("username", res.username);
+        localStorage.setItem('userId', res.UserId);
         alert(res.msg);
         window.location.href = 'index.html';
     }else{

@@ -2,12 +2,19 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
 const { userModel } = require('../models/user.models');
+const { authorization } = require('../middlewares/authorization.middleware');
 require('dotenv').config();
 
 const userRouter = express.Router();
 
-userRouter.get('/', (req, res)=>{
-    res.status(200).send('working fine');
+userRouter.get('/:id', async (req, res)=>{
+    const {id} = req.params;
+    try{
+        const user = await userModel.findById({_id: id});
+        res.status(200).send(user);
+    }catch(err){
+        res.status(400).send({"err": "Something went wrong"});
+    }
 })
 
 userRouter.post('/add',async (req, res)=>{
@@ -38,13 +45,14 @@ userRouter.post('/login', async(req, res)=>{
         const user = await userModel.findOne({email});
         let result = await bcrypt.compare(data.password, user.password);
         if(result)
-        res.status(200).send({"msg": "Login Successfully", "token": jwt.sign({userId: user._id}, secretKey), "username": `${user.name}`});
+        res.status(200).send({"msg": "Login Successfully", "token": jwt.sign({userId: user._id}, secretKey), "username": `${user.name}`, "UserId": user._id});
         else
         res.status(400).send({"msg": "Wrong Credentials"});
     }catch(err){
         res.status(400).send({"err": "Something went wrong"});
     }
 })
+
 userRouter.post('/admin/login', async(req, res)=>{
     const data = req.body;
     const secretKey = process.env.secretKey;
@@ -59,6 +67,15 @@ userRouter.post('/admin/login', async(req, res)=>{
     }catch(err){
         res.status(400).send({"err": "Something went wrong"});
     }
+})
+
+userRouter.use(authorization);
+userRouter.patch('update/:id', async (req, res)=>{
+    res.status(200).send({"msg": "This route will be used for promoting a user into an admin"})
+})
+
+userRouter.get('/', (req, res)=>{
+    res.status(200).send('working fine');
 })
 
 

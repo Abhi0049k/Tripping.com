@@ -19,7 +19,7 @@
             </div>
             <div class="right">
                 <div class="userInfo">
-                    <a href="userDashBoard.html">
+                    <a href="#">
                         <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
                             data-svg="user">
                             <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
@@ -49,7 +49,8 @@
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path
-                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" stroke="silver" stroke-width="2"/>
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                            stroke="silver" stroke-width="2" />
                     </svg>
                 </span>
                 <div class="section">
@@ -87,93 +88,102 @@
             </div>
             <div class="search-bar">
                 <form>
-
-                    <label for="location">
-                        <span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                data-svg="search">
-                                <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
-                                <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z"></path>
-                            </svg>
-                        </span>
+                    <div>
+                        <label for="location">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    data-svg="search">
+                                    <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
+                                    <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z">
+                                    </path>
+                                </svg>
+                            </span>
+                        </label>
                         <input type="text" id="location" placeholder="Location">
-                    </label>
-                    <label for="checkIn">
-                        <span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                data-svg="sign-in">
-                                <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
-                                <polygon points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
-                                </polygon>
-                            </svg>
-                        </span>
+                    </div>
+                    <div>
+                        <label for="checkIn">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    data-svg="sign-in">
+                                    <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
+                                    <polygon
+                                        points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
+                                    </polygon>
+                                </svg>
+                            </span>
+                        </label>
                         <input type="date" id="checkIn">
-                    </label>
-                    <label for="checkOut">
-                        <span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                data-svg="sign-out">
-                                <polygon
-                                    points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
-                                </polygon>
-                                <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3"></polygon>
-                            </svg>
-                        </span>
+                    </div>
+                    <div>
+                        <label for="checkOut">
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
+                                    data-svg="sign-out">
+                                    <polygon
+                                        points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
+                                    </polygon>
+                                    <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3"></polygon>
+                                </svg>
+                            </span>
+                        </label>
                         <input type="date" id="checkOut">
-                    </label>
-                    <select id="numberOfPeople">
-                        <option value="">Select Guests</option>
-                        <option value="1">1 Guest</option>
-                        <option value="2">2 Guests</option>
-                        <option value="3">3 Guests</option>
-                        <option value="4">4 Guests</option>
-                        <option value="5">5 Guests</option>
-                        <option value="6">6 Guests</option>
-                        <option value="7">7 Guests</option>
-                        <option value="8">8 Guests</option>
-                        <option value="9">9 Guests</option>
-                        <option value="10">10 Guests</option>
-                        <option value="11">11 Guests</option>
-                        <option value="12">12 Guests</option>
-                        <option value="13">13 Guests</option>
-                        <option value="14">14 Guests</option>
-                        <option value="15">15 Guests</option>
-                        <option value="16">16 Guests</option>
-                        <option value="17">17 Guests</option>
-                        <option value="18">18 Guests</option>
-                        <option value="19">19 Guests</option>
-                        <option value="20">20 Guests</option>
-                        <option value="21">21 Guest</option>
-                        <option value="22">22 Guests</option>
-                        <option value="23">23 Guests</option>
-                        <option value="24">24 Guests</option>
-                        <option value="25">25 Guests</option>
-                        <option value="26">26 Guests</option>
-                        <option value="27">27 Guests</option>
-                        <option value="28">28 Guests</option>
-                        <option value="29">29 Guests</option>
-                        <option value="30">30 Guests</option>
-                        <option value="31">31 Guest</option>
-                        <option value="32">32 Guests</option>
-                        <option value="33">33 Guests</option>
-                        <option value="34">34 Guests</option>
-                        <option value="35">35 Guests</option>
-                        <option value="36">36 Guests</option>
-                        <option value="37">37 Guests</option>
-                        <option value="38">38 Guests</option>
-                        <option value="39">39 Guests</option>
-                        <option value="40">40 Guests</option>
-                        <option value="41">41 Guest</option>
-                        <option value="42">42 Guests</option>
-                        <option value="43">43 Guests</option>
-                        <option value="44">44 Guests</option>
-                        <option value="45">45 Guests</option>
-                        <option value="46">46 Guests</option>
-                        <option value="47">47 Guests</option>
-                        <option value="48">48 Guests</option>
-                        <option value="49">49 Guests</option>
-                        <option value="50">50 Guests</option>
-                    </select>
+                    </div>
+                    <div>
+                        <select id="numberOfPeople">
+                            <option value="">Select Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+                            <option value="7">7 Guests</option>
+                            <option value="8">8 Guests</option>
+                            <option value="9">9 Guests</option>
+                            <option value="10">10 Guests</option>
+                            <option value="11">11 Guests</option>
+                            <option value="12">12 Guests</option>
+                            <option value="13">13 Guests</option>
+                            <option value="14">14 Guests</option>
+                            <option value="15">15 Guests</option>
+                            <option value="16">16 Guests</option>
+                            <option value="17">17 Guests</option>
+                            <option value="18">18 Guests</option>
+                            <option value="19">19 Guests</option>
+                            <option value="20">20 Guests</option>
+                            <option value="21">21 Guest</option>
+                            <option value="22">22 Guests</option>
+                            <option value="23">23 Guests</option>
+                            <option value="24">24 Guests</option>
+                            <option value="25">25 Guests</option>
+                            <option value="26">26 Guests</option>
+                            <option value="27">27 Guests</option>
+                            <option value="28">28 Guests</option>
+                            <option value="29">29 Guests</option>
+                            <option value="30">30 Guests</option>
+                            <option value="31">31 Guest</option>
+                            <option value="32">32 Guests</option>
+                            <option value="33">33 Guests</option>
+                            <option value="34">34 Guests</option>
+                            <option value="35">35 Guests</option>
+                            <option value="36">36 Guests</option>
+                            <option value="37">37 Guests</option>
+                            <option value="38">38 Guests</option>
+                            <option value="39">39 Guests</option>
+                            <option value="40">40 Guests</option>
+                            <option value="41">41 Guest</option>
+                            <option value="42">42 Guests</option>
+                            <option value="43">43 Guests</option>
+                            <option value="44">44 Guests</option>
+                            <option value="45">45 Guests</option>
+                            <option value="46">46 Guests</option>
+                            <option value="47">47 Guests</option>
+                            <option value="48">48 Guests</option>
+                            <option value="49">49 Guests</option>
+                            <option value="50">50 Guests</option>
+                        </select>
+                    </div>
                     <input type="submit" value="Search">
                 </form>
             </div>

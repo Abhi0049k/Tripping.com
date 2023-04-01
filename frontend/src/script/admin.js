@@ -38,6 +38,17 @@ const creatingDay = document.getElementById('creationDay');
 const creatingPricing = document.getElementById('creationpricing');
 const creatingDiscount = document.getElementById('creationDiscount');
 const creationForm = document.getElementById('creatingPlace');
+const bookingSection = document.querySelector('#operations #totalBooking')
+const bookingSectionContainer = document.querySelector('#operations #totalBooking .container')
+const statisticsSection = document.querySelector('#operations #statistics');
+const statisticsSectionHeading = document.querySelector('#operations #statistics h1')
+const logo = document.querySelector('nav > .brandLogo');
+
+logo.addEventListener('click', ()=>{
+    window.location.href = "index.html";
+})
+let totalRevenue = 0;
+let ageGroup = [];
 
 ListAside.addEventListener('click', ()=>{
   removingActive();
@@ -53,10 +64,14 @@ AddAside.addEventListener('click', ()=>{
 BookingAside.addEventListener('click', ()=>{
   removingActive();
   BookingAside.setAttribute('class', 'active');
+  bookingSection.style.display = 'block'
+  fetchBooking();
 })
 StatsAside.addEventListener('click', ()=>{
   removingActive();
   StatsAside.setAttribute('class', 'active');
+  statisticsSectionHeading.innerText = `Total revenue generated is Rs.${totalRevenue}`
+  statisticsSection.style.display = 'block'
 })
 SignoutAside.addEventListener('click', ()=>{
   removingActive();
@@ -74,6 +89,8 @@ function removingActive(){
   SignoutAside.setAttribute('class', '');
   appPlaces.style.display = 'none';
   addingPlace.style.display = 'none';
+  bookingSection.style.display = 'none';
+  statisticsSection.style.display = 'none';
 }
 
 window.addEventListener('load', ()=>{
@@ -236,11 +253,24 @@ async function fetchRender(){
   display(data);
 }
 
+async function fetchBooking(){
+  let data = await fetch('http://localhost:8998/booking',{
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: token
+    }
+  });
+  data = await data.json();
+  displayingBooking(data);
+}
+
 fetchRender();
 
 function display(data){
   let arr = data.map(eachCard);
   listContainer.innerHTML = arr.join('\n');
+  localStorage.setItem('totalRevenue', totalRevenue);
   let deletebtn = document.querySelectorAll('#operations #appPlaces .container .card .body .del')
   deletebtn.forEach((el)=>{
     el.addEventListener('click', ()=>{
@@ -253,6 +283,55 @@ function display(data){
       updatingElment(el.dataset.id);
     })
   })
+}
+
+function displayingBooking(data){
+  let arr = data.map(eachBooking);
+  if(arr.length===0)
+  bookingSectionContainer.innerHTML = `<h1>No one has used Tripping.com yet.</h1>`;
+  else
+  bookingSectionContainer.innerHTML = arr.join('\n');
+  let cancelBookingBtns = document.querySelectorAll('#totalBooking .cancelBooking');
+  cancelBookingBtns.forEach((el)=>{
+    el.addEventListener('click', ()=>{
+      cancellation(el.dataset.id);
+    })
+  })
+}
+
+async function cancellation(id){
+  let res = await fetch(`http://localhost:8998/booking/${id}`,{
+      method: "DELETE",
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  })
+  let state = res.ok;
+  res = await res.json();
+  if(state){
+      popup(res.msg);
+  }else{
+      popup(res.err);
+  }
+}
+
+function eachBooking(el){
+  ageGroup.push(el.age);
+  let str = `
+  <div class='eachbooking'> 
+  <p>RefId #${el._id}</p>
+  <p>Name: ${el.name}</p>
+  <p>Age: ${el.age}</p>
+  <p>Email: ${el.email}</p>
+  <p>Check In: ${el.checkin}</p>
+  <p>Check Out: ${el.checkout}</h4>
+  <p>Adhaar No.: ${el.adhaarNo}</p>
+  <p>Place RefId: ${el.placeId}</p>
+  <p>User RefId: ${el.userId}</p>
+  <button class='cancelBooking' data-id=${el._id}>Cancel Booking</button>
+  </div>
+  `
+  return str;
 }
 
 async function updatingElment(id){
@@ -317,5 +396,8 @@ function eachCard(el){
   </div>
   </div>
   `;
+  if(el.isBooked===true){
+    totalRevenue+=el.actualprice;
+  }
   return str;
 }
