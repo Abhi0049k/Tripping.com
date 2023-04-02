@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8998/user/admin';
+const baseUrl = 'https://fierce-gold-overalls.cyclic.app/user/admin';
 const email= document.querySelector('form #email');
 const password = document.querySelector('form #password');
 const formEl = document.querySelector('form');

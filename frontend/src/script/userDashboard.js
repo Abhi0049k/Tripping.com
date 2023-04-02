@@ -44,7 +44,7 @@ SignoutAside.addEventListener('click', () => {
 })
 
 async function fetchDetails(){
-    let data = await fetch(`http://localhost:8998/user/${userId}`);
+    let data = await fetch(`https://fierce-gold-overalls.cyclic.app/user/${userId}`);
     data = await data.json();
     displayDetails(data);
 }
@@ -74,7 +74,7 @@ function removingActive() {
 }
 
 async function fetchBooking(){
-    let data = await fetch(`http://localhost:8998/booking/${userId}`,{
+    let data = await fetch(`https://fierce-gold-overalls.cyclic.app/booking/${userId}`,{
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ function displayingBooking(data){
 }
 
 async function cancellation(id){
-    let res = await fetch(`http://localhost:8998/booking/${id}`,{
+    let res = await fetch(`https://fierce-gold-overalls.cyclic.app/booking/${id}`,{
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'

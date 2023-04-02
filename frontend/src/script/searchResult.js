@@ -42,7 +42,7 @@ formEl.addEventListener('submit', (evnt)=>{
 
 async function changingBookingStatus(id){
     let obj = {isBooked: true}
-    let res = await fetch(`http://localhost:8998/places/update/${id}`,{
+    let res = await fetch(`https://fierce-gold-overalls.cyclic.app/places/update/${id}`,{
         body: JSON.stringify(obj),
         headers:{
             'Content-type': 'application/json',
@@ -57,10 +57,10 @@ async function changingBookingStatus(id){
 }
 
 async function changinguserStatus(bookingId){
-    let user = await fetch(`http://localhost:8998/user/${userId}`);
+    let user = await fetch(`https://fierce-gold-overalls.cyclic.app/user/${userId}`);
     user = await user.json();
     user.booking.push(bookingId);
-    let res = await fetch(`http://localhost:8998/user/update/${userId}`,{
+    let res = await fetch(`https://fierce-gold-overalls.cyclic.app/user/update/${userId}`,{
         body: JSON.stringify(user),
         headers: {
             'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ async function changinguserStatus(bookingId){
 }
 
 async function addbookingRoute(obj, id){
-    let res = await fetch(`http://localhost:8998/booking/book`,{
+    let res = await fetch(`https://fierce-gold-overalls.cyclic.app/booking/book`,{
         body: JSON.stringify(obj),
         headers: {
             'Content-type': 'application/json',
@@ -108,7 +108,8 @@ function removingValue(){
 
 async function fetchRender() {
     try{
-        let data = await fetch(`http://localhost:8998/places?query=${loc}`);
+        // let data = await fetch(`http://localhost:8998/places?query=${loc}`);
+        let data = await fetch(`https://fierce-gold-overalls.cyclic.app/places?query=${loc}`);
         data = await data.json();
         display(data);
     }catch(err){

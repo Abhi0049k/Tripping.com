@@ -127,7 +127,7 @@ function removingvalues(){
 }
 
 async function addingDb(obj){
-  let res = await fetch('http://localhost:8998/places/add',{
+  let res = await fetch('https://fierce-gold-overalls.cyclic.app/places/add',{
     body: JSON.stringify(obj),
     headers:{
       'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ updationForm.addEventListener('submit', (evnt)=>{
 
 async function updatingInfo(obj, id){
   updationFormDiv.style.display = 'none'
-  let res = await fetch(`http://localhost:8998/places/update/${id}`, {
+  let res = await fetch(`https://fierce-gold-overalls.cyclic.app/places/update/${id}`, {
     method: "PATCH",
     headers: {
       'Content-Type': 'application/json',
@@ -248,13 +248,13 @@ clearHam.addEventListener('click', ()=>{
 
 
 async function fetchRender(){
-  let data = await fetch('http://localhost:8998/places/');
+  let data = await fetch('https://fierce-gold-overalls.cyclic.app/places/');
   data = await data.json();
   display(data);
 }
 
 async function fetchBooking(){
-  let data = await fetch('http://localhost:8998/booking',{
+  let data = await fetch('https://fierce-gold-overalls.cyclic.app/booking',{
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -300,7 +300,7 @@ function displayingBooking(data){
 }
 
 async function cancellation(id){
-  let res = await fetch(`http://localhost:8998/booking/${id}`,{
+  let res = await fetch(`https://fierce-gold-overalls.cyclic.app/booking/${id}`,{
       method: "DELETE",
       headers: {
           'Content-Type': 'application/json'
@@ -335,7 +335,7 @@ function eachBooking(el){
 }
 
 async function updatingElment(id){
-  let user = await fetch(`http://localhost:8998/places/${id}`);
+  let user = await fetch(`https://fierce-gold-overalls.cyclic.app/places/${id}`);
   user = await user.json();
   updationFormDiv.style.display= 'block'
   fillingUpdationForm(user);
@@ -355,7 +355,7 @@ function fillingUpdationForm(obj){
 }
 
 async function deletionOfPlaces(id){
-  let res = await fetch(`http://localhost:8998/places/delete/${id}`,{
+  let res = await fetch(`https://fierce-gold-overalls.cyclic.app/places/delete/${id}`,{
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
