@@ -32,8 +32,9 @@ const registeringUser = async(obj) =>{
             alert("User already exist, please login");
         }else if(msg!="User already exist, please login"){
             alert(msg);
-            window.location.href = 'singin.html'
+            window.location.href = 'signin.html'
     }else{
         alert('Wrong Credentials');
+    }
     }
 }
