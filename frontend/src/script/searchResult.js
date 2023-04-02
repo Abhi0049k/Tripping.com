@@ -36,7 +36,7 @@ formEl.addEventListener('submit', (evnt)=>{
     obj.checkout = checkoutEl.value;
     obj.adhaarNo = idproof.value;
     obj.placeId = placeId;
-    addbookingRoute(obj);
+    addbookingRoute(obj, placeId);
     changingBookingStatus(placeId);
 })
 
@@ -56,25 +56,26 @@ async function changingBookingStatus(id){
     }
 }
 
-// async function changinguserStatus(bookingId){
-//     let user = await fetch(`http://localhost:8998/user/${userId}`);
-//     user = await user.json();
-//     user.booking.push(bookingId);
-//     let res = await fetch(`http://localhost:8998/user/update/${userId}`,{
-//         body: JSON.stringify(user),
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//         method: 'PATCH'
-//     })
-//     if(res.ok){
-//         console.log('Job Done');
-//     }else{
-//         console.log('got fired');
-//     }
-// }
+async function changinguserStatus(bookingId){
+    let user = await fetch(`http://localhost:8998/user/${userId}`);
+    user = await user.json();
+    user.booking.push(bookingId);
+    let res = await fetch(`http://localhost:8998/user/update/${userId}`,{
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token
+        },
+        method: 'PATCH'
+    })
+    if(res.ok){
+        console.log('Job Done');
+    }else{
+        console.log('got fired');
+    }
+}
 
-async function addbookingRoute(obj){
+async function addbookingRoute(obj, id){
     let res = await fetch(`http://localhost:8998/booking/book`,{
         body: JSON.stringify(obj),
         headers: {
@@ -86,6 +87,7 @@ async function addbookingRoute(obj){
     if(res.ok){
         res = await res.json();
         popup('Booking Confirm')
+        changinguserStatus(id)
         infoScreen.style.display = 'none';
         removingValue();
     }else{
@@ -152,7 +154,7 @@ function eachCard(el) {
         <h5>Ref id #${el._id}</h5>
         <h2 class='title'>${el.name}</h2>
         <p class='place'>${el.location}</p>
-        <p class='facilities'>${facilities.join('')}</p> 
+        <p class='facilities'>${facilities.join(' ')}</p> 
         <p class='isbooked'>${el.isBooked == true ? 'Booked' : 'Not Booked'}</p>
         <h3 class='price'><small><del>Rs.${el.pricing}</del></small>  Rs. ${el.actualprice}</h3>
         <button class='book' data-id=${el._id}>Book</button>

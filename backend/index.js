@@ -3,6 +3,8 @@ const {connection} = require('./db');
 const { userRouter } = require('./routes/user.routes');
 const { placesRouter } = require('./routes/places.routes');
 const cors = require('cors');
+const swaggerJSdoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express')
 const { bookingRouter } = require('./routes/booking.routes');
 require('dotenv').config();
 
@@ -10,6 +12,25 @@ const app = express();
 
 app.use(cors());
 app.use(express.json())
+const options ={
+    definition:{
+        openapi: "3.0.0",
+        info: {
+            title: "Construct Week",
+            version: "1.0.0"
+        },
+        servers:[
+            {
+                url: "http://localhost:8998"
+            }
+        ]
+    },
+    apis: ["./routes/*.js"]
+}
+
+const swaggerSpec = swaggerJSdoc(options);
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 app.use('/booking', bookingRouter);
