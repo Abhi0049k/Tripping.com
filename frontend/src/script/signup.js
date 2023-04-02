@@ -28,12 +28,11 @@ const registeringUser = async(obj) =>{
     if(res.ok){
         res = await res.json();
         const msg = res.msg;
-        if(msg==="Registration Successful"){
-            alert("Registration Successful");
-            window.location.href = 'signin.html';
-        }else if(msg==="User already exist, please login"){
+        if(msg==="User already exist, please login"){
             alert("User already exist, please login");
-        }
+        }else{
+            alert(msg);
+            window.location.href = 'singin.html'
     }else{
         alert('Wrong Credentials');
     }
