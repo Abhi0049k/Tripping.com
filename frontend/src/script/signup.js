@@ -28,9 +28,9 @@ const registeringUser = async(obj) =>{
     if(res.ok){
         res = await res.json();
         const msg = res.msg;
-        if(msg==="User already exist, please login"){
+        if(msg=="User already exist, please login"){
             alert("User already exist, please login");
-        }else{
+        }else if(msg!="User already exist, please login"){
             alert(msg);
             window.location.href = 'singin.html'
     }else{
