@@ -8,6 +8,7 @@ Following is the Tech Stack which I used to build this project
 - <img src="https://img.icons8.com/ios-filled/30/000000/css3.png"/> `CSS` - Cascading Style Sheets, a stylesheet language used to describe the presentation of a document written in HTML.
 - <img src="https://img.icons8.com/color/30/000000/javascript--v1.png"/> `JavaScript (JS)` - A programming language used to add interactivity and dynamic behavior to web pages and web applications.
 - <img src="https://img.icons8.com/color/30/000000/nodejs.png"/> `Node.js` - An open-source, cross-platform JavaScript runtime environment that allows developers to build server-side applications using JavaScript.
+- <img src="https://img.icons8.com/color/30/000000/express.png"/> **Express.js** - A popular Node.js web application framework that simplifies building server-side web applications.
 - <img src="https://img.icons8.com/color/30/000000/mongodb.png"/> `MongoDB` - A popular NoSQL database that stores data in flexible, JSON-like documents.
 - <img src="https://img.icons8.com/color/30/000000/mongoose.png"/> `Mongoose` - An Object Data Modeling (ODM) library for MongoDB and Node.js that provides a higher-level abstraction for interacting with MongoDB.
 
