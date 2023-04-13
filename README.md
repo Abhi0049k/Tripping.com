@@ -1,5 +1,5 @@
 # ready-lock-9044  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:[Tripping.com](https://nimble-starburst-6bbdd4.netlify.app/):-
-Tripping.com is a clone of [TripVillas](https://www.tripvillas.com/) which was given to me for this construct week.
+Tripping.com is a clone of [TripVillas](https://www.tripvillas.com/) which is a global rental platform which offer rental properties for vacations.
 Tripping.com is not a exact clone of TripVillas as I have made changes in it that makes it a bit different from the original.
 # Tech Stack
 Following is the Tech Stack which I used to build this project
