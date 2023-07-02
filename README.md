@@ -1,12 +1,12 @@
 # ready-lock-9044  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:[Tripping.com](https://nimble-starburst-6bbdd4.netlify.app/):-
-Tripping.com is a clone of [TripVillas](https://www.tripvillas.com/) which is a global rental platform which offer rental properties for vacations.
-Tripping.com is not a exact clone of TripVillas as I have made changes in it that makes it a bit different from the original.
+Tripping.com is a clone of [TripVillas](https://www.tripvillas.com/) which is a global rental platform which offers rental properties for vacations.
+Tripping.com is not an exact clone of TripVillas as I have made changes in it that make it a bit different from the original.
 # Tech Stack
 Following is the Tech Stack which I used to build this project
 
 - <img src="https://img.icons8.com/ios-filled/30/000000/html-5--v1.png"/> `HTML` - Hypertext Markup Language, used for creating web pages and web applications.
 - <img src="https://img.icons8.com/ios-filled/30/000000/css3.png"/> `CSS` - Cascading Style Sheets, a stylesheet language used to describe the presentation of a document written in HTML.
-- <img src="https://img.icons8.com/color/30/000000/javascript--v1.png"/> `JavaScript (JS)` - A programming language used to add interactivity and dynamic behavior to web pages and web applications.
+- <img src="https://img.icons8.com/color/30/000000/javascript--v1.png"/> `JavaScript (JS)` - A programming language used to add interactivity and dynamic behaviour to web pages and web applications.
 - <img src="https://img.icons8.com/color/30/000000/nodejs.png"/> `Node.js` - An open-source, cross-platform JavaScript runtime environment that allows developers to build server-side applications using JavaScript.
 - <img src="https://img.icons8.com/color/30/000000/express.png"/> **Express.js** - A popular Node.js web application framework that simplifies building server-side web applications.
 - <img src="https://img.icons8.com/color/30/000000/mongodb.png"/> `MongoDB` - A popular NoSQL database that stores data in flexible, JSON-like documents.
