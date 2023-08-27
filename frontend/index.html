@@ -3,192 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tripping.com | Book vacation rentals, holiday homes, homestays, villas, apartments and more</title>
     <link rel="shortcut icon" type="x-icon" href="./imgs/trip.jpg">
-    <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="stylesheet" href="./src/css/navbar.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="brandLogo">
-                <img src="./imgs/brand.png" alt="">
-            </div>
-            <div class="right">
-                <div class="userInfo">
-                    <a href="#">
-                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                            data-svg="user">
-                            <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
-                            <path fill="none" stroke="white" stroke-width="1.1"
-                                d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="hamburger">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 24 24" width="64px">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" stroke="white" stroke-width='2' />
-                        </svg>
-                    </span>
-                </div>
-            </div>
-            <div class="login">
-                <p><a href="signup.html">SignUp</a></p>
-                <p><a href="signin.html">SignIn</a></p>
-            </div>
-            <div class="logout">
-                <p><a href="#">Signout</a></p>
-            </div>
-            <div class="hamburgerPart">
-                <span class="clearingHam">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                            stroke="silver" stroke-width="2" />
-                    </svg>
-                </span>
-                <div class="section">
-                    <p class="heading">
-                        ARE YOU A PROPERTY OWNER/MANAGER?
-                    </p>
-                    <p>List New Property</p>
-                    <p>Sign In To Your Dashboard</p>
-                </div>
-                <div class="section">
-                    <p class="heading">
-                        HOLIDAY HOMES FOR SALE
-                    </p>
-                    <div class="innerDiv">
-                        <p class="subHeading">Tripping.com Managed</p>
-                        <p>Homes from A grade developer. Rentals guaranteed</p>
-                        <p class="subHeading">Marketplace</p>
-                        <p>See what homes are up for sale from different property owners.</p>
-                    </div>
-                    <div class="innerDiv">
-                        <p class="subHeading">About Us</p>
-                        <p class="subHeading">Privacy Policy</p>
-                        <p class="subHeading">Terms of Use</p>
-                        <p class="subHeading">FAQs</p>
-                        <p class="subHeading">Contact Us</p>
-                    </div>
-                    <p class="subHeading">&#169; Tripping Pte Ltd</p>
-                </div>
-            </div>
-        </nav>
-        <div id="container">
-            <div class="slogan">
-                <p>Book <del>Hotels</del> Vacation Rentals</p>
-                <p>Top Holiday Homes - Villas, Apartments & Homestays</p>
-            </div>
-            <div class="search-bar">
-                <form>
-                    <div>
-                        <label for="location">
-                            <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                    data-svg="search">
-                                    <circle fill="none" stroke="#000" stroke-width="1.1" cx="9" cy="9" r="7"></circle>
-                                    <path fill="none" stroke="#000" stroke-width="1.1" d="M14,14 L18,18 L14,14 Z">
-                                    </path>
-                                </svg>
-                            </span>
-                        </label>
-                        <input type="text" id="location" placeholder="Location">
-                    </div>
-                    <div>
-                        <label for="checkIn">
-                            <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                    data-svg="sign-in">
-                                    <polygon points="7 2 17 2 17 17 7 17 7 16 16 16 16 3 7 3"></polygon>
-                                    <polygon
-                                        points="9.1 13.4 8.5 12.8 11.28 10 4 10 4 9 11.28 9 8.5 6.2 9.1 5.62 13 9.5">
-                                    </polygon>
-                                </svg>
-                            </span>
-                        </label>
-                        <input type="date" id="checkIn">
-                    </div>
-                    <div>
-                        <label for="checkOut">
-                            <span>
-                                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                                    data-svg="sign-out">
-                                    <polygon
-                                        points="13.1 13.4 12.5 12.8 15.28 10 8 10 8 9 15.28 9 12.5 6.2 13.1 5.62 17 9.5">
-                                    </polygon>
-                                    <polygon points="13 2 3 2 3 17 13 17 13 16 4 16 4 3 13 3"></polygon>
-                                </svg>
-                            </span>
-                        </label>
-                        <input type="date" id="checkOut">
-                    </div>
-                    <div>
-                        <select id="numberOfPeople">
-                            <option value="">Select Guests</option>
-                            <option value="1">1 Guest</option>
-                            <option value="2">2 Guests</option>
-                            <option value="3">3 Guests</option>
-                            <option value="4">4 Guests</option>
-                            <option value="5">5 Guests</option>
-                            <option value="6">6 Guests</option>
-                            <option value="7">7 Guests</option>
-                            <option value="8">8 Guests</option>
-                            <option value="9">9 Guests</option>
-                            <option value="10">10 Guests</option>
-                            <option value="11">11 Guests</option>
-                            <option value="12">12 Guests</option>
-                            <option value="13">13 Guests</option>
-                            <option value="14">14 Guests</option>
-                            <option value="15">15 Guests</option>
-                            <option value="16">16 Guests</option>
-                            <option value="17">17 Guests</option>
-                            <option value="18">18 Guests</option>
-                            <option value="19">19 Guests</option>
-                            <option value="20">20 Guests</option>
-                            <option value="21">21 Guest</option>
-                            <option value="22">22 Guests</option>
-                            <option value="23">23 Guests</option>
-                            <option value="24">24 Guests</option>
-                            <option value="25">25 Guests</option>
-                            <option value="26">26 Guests</option>
-                            <option value="27">27 Guests</option>
-                            <option value="28">28 Guests</option>
-                            <option value="29">29 Guests</option>
-                            <option value="30">30 Guests</option>
-                            <option value="31">31 Guest</option>
-                            <option value="32">32 Guests</option>
-                            <option value="33">33 Guests</option>
-                            <option value="34">34 Guests</option>
-                            <option value="35">35 Guests</option>
-                            <option value="36">36 Guests</option>
-                            <option value="37">37 Guests</option>
-                            <option value="38">38 Guests</option>
-                            <option value="39">39 Guests</option>
-                            <option value="40">40 Guests</option>
-                            <option value="41">41 Guest</option>
-                            <option value="42">42 Guests</option>
-                            <option value="43">43 Guests</option>
-                            <option value="44">44 Guests</option>
-                            <option value="45">45 Guests</option>
-                            <option value="46">46 Guests</option>
-                            <option value="47">47 Guests</option>
-                            <option value="48">48 Guests</option>
-                            <option value="49">49 Guests</option>
-                            <option value="50">50 Guests</option>
-                        </select>
-                    </div>
-                    <input type="submit" value="Search">
-                </form>
+    <nav>
+        <div class="brandLogo">
+            <img src="./imgs/brand.png" alt="">
+        </div>
+        <div class="right">
+            <a href="#" class="userInfo">
+                <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+            </a>
+            <div class="hamburger">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
             </div>
         </div>
-    </header>
+        <div class="login">
+            <p><a href="signup.html">Sign Up</a></p>
+            <p><a href="signin.html">Sign In</a></p>
+        </div>
+        <div class="logout">
+            <p>Signout</p>
+        </div>
+        <div class="hamburgerPart">
+            <i class="fa-solid fa-xmark clearingHam" style="color: #ffffff;"></i>
+            <div class="section">
+                <p class="heading">
+                    ARE YOU A PROPERTY OWNER/MANAGER?
+                </p>
+                <p>List New Property</p>
+                <p>Sign In To Your Dashboard</p>
+            </div>
+            <div class="section">
+                <p class="heading">
+                    HOLIDAY HOMES FOR SALE
+                </p>
+                <div class="innerDiv">
+                    <p class="subHeading">Tripping.com Managed</p>
+                    <p>Homes from A grade developer. Rentals guaranteed</p>
+                    <p class="subHeading">Marketplace</p>
+                    <p>See what homes are up for sale from different property owners.</p>
+                </div>
+                <div class="innerDiv">
+                    <p class="subHeading">About Us</p>
+                    <p class="subHeading">Privacy Policy</p>
+                    <p class="subHeading">Terms of Use</p>
+                    <p class="subHeading">FAQs</p>
+                    <p class="subHeading">Contact Us</p>
+                </div>
+                <p class="subHeading">&#169; Tripping Pte Ltd</p>
+            </div>
+        </div>
+    </nav>
+    <div id="container">
+        <h1>
+            Book <del>Hotels</del> Vacation Rentals <br> Top Holiday Homes - Villas, Apartments & Homestays
+        </h1>
+        <form>
+            <label>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="location" placeholder="Location">
+            </label>
+            <label>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <input type="text" id="checkin" placeholder="Check In">
+            </label>
+            <label>
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <input type="text" id="checkout" placeholder="Check Out">
+            </label>
+            <label>
+                <select id="qty">
+                    <option value="">Select Guests</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                </select>
+            </label>
+            <input type="submit" value="SEARCH">
+        </form>
+    </div>
     <div id="topDestinations">
         <h2>Top Destinations</h2>
         <div class="container">
@@ -725,8 +648,10 @@
             </div>
         </div>
     </div>
-    <script src="./src/script/navbar.js"></script>
-    <script src="./src/script/home.js"></script>
+    <script src="https://kit.fontawesome.com/e2f54f564d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/home.js"></script>
 </body>
 
 </html>

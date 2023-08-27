@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+#container {
+    height: 75vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 25em; */
+}
+
+#container h1 {
+    color: white;
+    font-size: 2.2em;
+    font-weight: 400;
+}
+
+#container form {
+    margin-top: 1.5em;
+    background-color: white;
+    padding: 1em;
+    display: flex;
+    border: 1px solid black;
+    color: silver;
+}
+
+#container form label {
+    border: 1px solid silver;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 1.5em;
+}
+
+#container form label select {
+    color: rgba(0, 0, 0, 0.6);
+    padding-left: 4px;
+}
+
+#container form input[type='submit'] {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    padding: 0 3em;
+}
+
+#location{
+    font-size: 1em;
+    width: 180px;
+}
+
+#topDestinations {
+    margin: 24px auto;
+}
+
+#topDestinations>h2 {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#topDestinations .container {
+    padding: 0px 44px;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+}
+
+#topDestinations .container .card {
+    height: 150px;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 247px;
+    background-size: auto;
+    color: white;
+}
+
+#topDestinations .container .card h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#topDestinations .container .card:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/goa-11.f1c86735cec4.jpg');
+}
+
+#topDestinations .container .card:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/galle-27739.4e9874b7f375.jpg');
+}
+
+#topDestinations .container .card:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/phuket-72.9d6f9e3883be.jpg');
+}
+
+#topDestinations .container .card:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kandy-5144.2adb0839ea6a.jpg');
+}
+
+#topDestinations .container .card:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/koh-samui-5119.82e8a6c9cf8b.jpg');
+}
+
+
+.secondContainer {
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-around;
+    margin: 44px auto;
+    gap: 24px;
+}
+
+.secondContainer .left {
+    text-align: center;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 40px;
+}
+
+.secondContainer .left h2,
+.secondContainer .left .innercontain .smallItem h4 {
+    font-weight: 300;
+}
+
+.secondContainer .left .innercontain {
+    margin-top: 16px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.secondContainer .left .innercontain .smallItem img {
+    width: 56px;
+}
+
+.secondContainer .right {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 33px;
+}
+
+
+.resortcard {
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 200px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.resortcard h3 {
+    font-weight: 300;
+}
+
+.resortcard p{
+    font-size: 0.9em;
+}
+
+.resortcard:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16724/photo_200/3cfe907bf1a711e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16720/photo_200/3a17e0ebf71b11e992500a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16722/photo_200/d9d86936f1a311e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16723/photo_200/14650812f1a811e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16721/photo_200/a85131caf1a511e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(6) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16727/photo_200/92a02d4af1a511e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.resortcard:nth-child(7) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://d2vcelvjdj7n25.cloudfront.net/media/gated_community/16728/photo_200/de6bc87af1a411e9924e0a8e1b1ce4da_photo_200.jpeg');
+}
+
+.thirdContainer {
+    display: flex;
+    padding: 0px 44px;
+    justify-content: space-around;
+}
+
+.thirdContainer>div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 14px;
+    width: 45%;
+    margin-bottom: 24px;
+}
+
+.thirdContainer>div>h2,
+.thirdContainer>div>.innercontain h4 {
+    text-align: center;
+    font-weight: 300;
+}
+
+.thirdContainer>div>.innercontain {
+    text-align: center;
+    margin: 34px auto;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.thirdContainer>div>.innercontain>.opportCard {
+    margin: 8px auto;
+}
+
+.thirdContainer>div>.innercontain>.opportCard>img {
+    width: 56px;
+}
+
+.thirdContainer>div>button {
+    display: block;
+    margin: 16px auto;
+    width: 70%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+}
+
+.thirdContainer>div>button:hover {
+    background-color: #0975ea;
+}
+
+.fourthcontainer {
+    padding: 40px 60px;
+}
+
+.fourthcontainer h2 {
+    font-weight: 300;
+    padding-left: 18px;
+}
+
+.fourthcontainer>a {
+    padding-left: 18px;
+    color: royalblue;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.fourthcontainer>a:hover {
+    text-decoration: underline;
+}
+
+.fourthcontainer .placeCard {
+    margin: 24px auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.fourthcontainer .placeCard .smallcard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 247px;
+    padding: 24px;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fourthcontainer .placeCard .smallcard h3 {
+    font-weight: 400;
+    text-align: center;
+}
+
+.fourthcontainer>.placeCard>.smallcard:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2vcelvjdj7n25.cloudfront.net/media/collection/phuket.jpg');
+}
+
+.fourthcontainer>.placeCard>.smallcard:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2vcelvjdj7n25.cloudfront.net/media/collection/vindhyas-homestay.jpg');
+}
+
+.fourthcontainer>.placeCard>.smallcard:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2vcelvjdj7n25.cloudfront.net/media/collection/lonavala.jpg');
+}
+
+.fourthcontainer>.placeCard>.smallcard:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2vcelvjdj7n25.cloudfront.net/media/collection/beautiful-Bali-Gazebo_1.jpg');
+}
+
+.fourthcontainer>.placeCard>.smallcard:nth-child(5) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2vcelvjdj7n25.cloudfront.net/media/collection/sri_lanka.jpg');
+}
+
+.fifthContainer {
+    padding: 10px 78px;
+}
+
+.fifthContainer h2 {
+    font-weight: 300;
+    margin: 24px auto;
+}
+
+.fifthContainer>.mainContainer>.list {
+    border-bottom: 1px solid silver;
+    display: flex;
+    color: rgba(77, 74, 74, 0.5);
+}
+
+.fifthContainer>.mainContainer>.list>h5 {
+    font-weight: 400;
+    padding: 12px 24px;
+    letter-spacing: 1.5px;
+}
+
+.fifthContainer>.mainContainer>.list>h5:hover {
+    cursor: pointer;
+    color: rgba(77, 74, 74, 0.8);
+    border-bottom: 1px solid rgba(77, 74, 74, 0.8);
+}
+
+.fifthContainer>.mainContainer>div {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    display: none;
+}
+
+.fifthContainer>.mainContainer>div:nth-child(2) {
+    display: grid;
+}
+
+.fifthContainer>.mainContainer>div>.smallEl {
+    padding: 10px;
+    line-height: 24px;
+}
+
+.fifthContainer>.mainContainer>div>.smallEl>p {
+    font-size: 14px;
+}
+
+.fifthContainer>.mainContainer>div>.smallEl>p:nth-child(2) {
+    color: rgba(77, 74, 74, 0.5);
+}
+
+.fifthContainer>.mainContainer>div>.smallEl:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.fifthContainer>.mainContainer .active {
+    color: rgba(77, 74, 74, 0.8);
+    border-bottom: 1px solid rgba(77, 74, 74, 0.8);
+}

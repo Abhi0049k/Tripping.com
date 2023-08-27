@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+
+#searchResult{
+    display: flex;
+    height: 91.5vh;
+}
+
+#searchResult #left{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 60%;
+    height: 100%;
+}
+
+#searchResult #left .uppers{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid silver;
+    border-top: none;
+}
+
+
+
+#searchResult #left .uppers label{
+    display: flex;
+    border: 1px solid silver;
+    padding: 8px;
+    gap: 4px;
+}
+
+#searchResult #left .uppers label:hover{
+    border: 1px solid rgb(38, 36, 36);
+}
+
+#searchResult #left .lowers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+}
+
+#searchResult #left .lowers .extras{
+    display: flex;
+    padding: 8px 12px;
+    color: rgb(51, 47, 47);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchResult #left .lowers .extras label{
+    font-size: 20px
+}
+
+#searchResult #left .lowers .extras label select{
+    margin-left: 4px;
+    color: #007bff;
+    width: 182px;
+    font-size: 18px;
+}
+
+#errMsg{
+    margin: 14px 18px;
+    padding: 18px;
+    background-color: rgba(245, 61, 61, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+}
+
+#errMsg h3{
+    color: rgb(245, 61, 61);
+}
+
+#errMsg h4{
+    color: rgb(197, 38, 38);
+}
+
+#searchResult #left .lowers .cardContainer{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    gap: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+#searchResult #left .lowers .cardContainer::-webkit-scrollbar{
+    width: 6px;
+    background-color: rgba(149, 157, 165, 0.2);
+}
+
+#searchResult #left .lowers .cardContainer::-webkit-scrollbar-thumb{
+    background-color: rgba(100, 100, 111, 0.8);
+}
+
+#searchResult #left .lowers .cardContainer .card{
+    width: 98%;
+    display: flex;
+    gap: 14px;
+    margin: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-height: 356px;
+}
+
+#searchResult #left .lowers .cardContainer .card:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#searchResult #left .lowers .cardContainer .card .image{
+    min-width: 388px;
+    max-width: 388px;
+    height: 100%;
+}
+
+#searchResult #left .lowers .cardContainer .card .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#searchResult #left .lowers .cardContainer .card .body{
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    height: 100%;
+    width: 560px;
+    gap: 10px;
+}
+
+#searchResult #left .lowers .cardContainer .card .body:hover .title{
+    text-decoration: underline #007bff;
+}
+
+#searchResult #left .lowers .cardContainer .card .body:hover .place{
+    text-decoration: underline #007bff;
+}
+#searchResult #left .lowers .cardContainer .card .body:hover .price{
+    text-decoration: underline #007bff;
+}
+
+#searchResult #left .lowers .cardContainer .card .body .place{
+    color: #007bff;
+    font-size: large;
+}
+
+
+#searchResult #left .lowers .cardContainer .card .body .book{
+    background-color: #007bff;
+    color: white;
+    width: 20%;
+    padding: 8px;
+    font-size: 1.5em;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#searchResult #left .lowers .card .body .facilities{
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#searchResult #left .lowers .card .body .facis{
+    padding: 6px;
+    border: 1px solid silver;
+}
+
+
+#searchResult #right{
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
+
+#searchResult #right iframe{
+    width: 100%;
+    height: 100%;
+}
+
+#modifyForm{
+    position: absolute;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#modifyForm form{
+    padding: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#modifyForm form h2{
+    font-weight: 300;
+}
+
+#modifyForm form label{
+    color: silver;
+    border: 1px solid silver;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 36px;
+    width: 518px;
+}
+
+#modifyForm form input{
+    width: 100%;
+    font-size: large;
+}
+
+#modifyForm form select {
+    width: 100%;
+    font-size: large;
+}
+
+#modifyForm form .dates{
+    display: flex;
+}
+
+#modifyForm form .dates label{
+    width: 250px;
+}
+
+#modifyForm form .btns{
+    display: flex;
+    gap: 15px;
+}
+
+#modifyForm form .btns input[type='submit']{
+    background-color: #007bff;
+    color: white;
+    font-weight: 300;
+    padding: 10px 16px;
+    font-size: large;
+}
+
+#modifyForm form .btns button{
+    font-size: large;
+    padding: 10px 16px;
+}

@@ -1,4 +1,4 @@
-const baseUrl = 'https://fierce-gold-overalls.cyclic.app/user/admin';
+const baseUrl = 'http://localhost:8998/user';
 const email= document.querySelector('form #email');
 const password = document.querySelector('form #password');
 const formEl = document.querySelector('form');
@@ -22,12 +22,11 @@ const gettingLoggedIn = async (obj) =>{
     if(res.ok){
         res = await res.json();
         localStorage.setItem('token', res.token);
-        localStorage.setItem("username", res.username);
+        localStorage.setItem('username', res.username);
         alert(res.msg);
-        window.location.href = 'adminDashboard.html';
+        window.location.href = 'index.html';
     }else{
         res = await res.json();
-        let {err, msg} = res;
-        alert(err || msg);
+        alert(res.msg);
     }
 }

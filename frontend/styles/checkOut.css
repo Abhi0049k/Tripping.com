@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+}
+
+.body .left {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.body .left .first {
+    background-color: #007BFF;
+    color: white;
+    padding: 46px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .left .first ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 14px 28px;
+    list-style-type: circle;
+}
+
+.body .left .first h2 {
+    font-weight: 400;
+}
+
+.body .left .second{
+    width: 100%;
+    display: flex;
+    height: 150px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .left .second .img{
+    width: 40%;
+}
+
+.body .left .second .img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.body .left .second .body{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 8px;
+}
+
+#propertyName{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.body .left .second .body p, .body .left .second .body span{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: small;
+}
+
+.body .left .third{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.body .left .third > div{
+    width: 25%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(60, 56, 56);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .left .fourth{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+}
+
+.body .left .fourth .top{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+}
+
+.body .left .fourth .top > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.body .left .fourth .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid silver;
+    border-bottom: 1px solid silver;
+    padding: 20px 0px;
+}
+
+.body .left .fifth {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    color: rgb(255, 0, 0);
+    background-color: rgb(255, 0, 0, 0.2);
+    gap: 14px;
+}
+
+.body .left .fifth > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.body .left .sixth{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.body .left .sixth > div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: rgb(60, 56, 56);
+}
+
+.body .left .sixth > div > h4{
+    font-size: 16px;
+}
+.body .left .sixth > div > p{
+    font-size: 14px;
+}
+
+.body .right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.body .right .first {
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff6ee;
+    color: #faa05a;
+    padding: 20px;
+}
+
+.body .right .second {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .right .second .top {
+    display: flex;
+    color: rgb(60, 56, 56);
+    justify-content: start;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    border-bottom: 1px solid silver;
+}
+
+
+.body .right .second .top h2 {
+    font-weight: 400;
+}
+
+.body .right .second .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 24px;
+}
+
+.body .right .second .bottom input {
+    padding: 12px;
+    border: 1px solid silver;
+}
+
+.body .right .second .bottom div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.body .right .second .bottom div input {
+    width: 50%;
+}
+
+.body .right .third {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .right .third .top {
+    display: flex;
+    color: rgb(60, 56, 56);
+    justify-content: start;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    border-bottom: 1px solid silver;
+}
+
+.body .right .third .top h2 {
+    font-weight: 400;
+}
+
+.body .right .third .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 24px;
+}
+
+.body .right .third .bottom p{
+    font-size: 15px;
+}
+
+.body .right .third .bottom textarea {
+    border: 1px solid silver;
+    width: 100%;
+    resize: vertical;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.body .right .fourth {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.body .right .fourth .top {
+    display: flex;
+    color: rgb(60, 56, 56);
+    justify-content: start;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    border-bottom: 1px solid silver;
+}
+
+.body .right .fourth .top h2 {
+    font-weight: 400;
+}
+
+.body .right .fourth .bottom {
+    padding: 24px;
+}
+
+.body .right .fourth .bottom .option{
+    display: flex;
+    border: 3px solid #007BFF;
+    padding: 12px 0;
+}
+
+.body > .right > .fourth > .bottom > .option > p{
+    color: #007BFF;
+    font-size: 36px;
+    padding: 0px 8px;
+}
+
+.body .right .fourth .bottom .option > div{
+    color: rgb(60, 56, 56);
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    line-height: 20px;
+}
+
+.body .right .fourth .bottom .option > div p{
+    font-size: 14px;
+}
+
+.body .right .fourth .bottom .option > div h2{
+    font-weight: 400;
+}
+
+
+.body .right .fifth{
+    background-color: rgba(236, 231, 231, 0.4);
+    padding: 18px;
+    line-height: 20px;
+}
+
+.body .right .fifth p {
+    font-size: 14px;
+    font-weight: 300;    
+}
+
+.body .right .fifth p span{
+    text-decoration: underline;
+}
+
+.body .right button.sixth{
+    background-color: #007BFF;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 14px;
+}

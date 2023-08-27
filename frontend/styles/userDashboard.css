@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    border: none;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+}
+
+#main .aside {
+    height: 84.5vh;
+    width: 18%;
+    background-color: #333;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#main .aside p {
+    padding: 8px;
+    padding-left: 14px;
+    border-radius: 6px;
+    border: 1px solid silver;
+    font-size: 24px;
+    color: white;
+}
+
+#main .aside p.active {
+    background-color: white;
+    cursor: pointer;
+    color: #333;
+}
+
+#main .aside p:hover {
+    background-color: white;
+    cursor: pointer;
+    color: #333;
+}
+
+#main .section {
+    width: 82%;
+}
+
+#main .section>form {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    height: 90.8vh;
+    width: 99.9%;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#main .section>form input {
+    width: 70%;
+    height: 46px;
+    border-bottom: 1px solid silver;
+    padding-left: 14px;
+    font-size: 22px;
+    box-sizing: border-box;
+    border: 1px solid silver;
+}
+
+#main .section>form input[type='submit'] {
+    padding-left: 0px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-weight: 300;
+}
+
+
+#main .section form input[type='submit']:hover {
+    background-color: ghostwhite;
+    border: 1px solid silver;
+    color: #333;
+    cursor: pointer;
+}
+
+#main .section .cardContainer {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 18px;
+    gap: 14px;
+    margin: 0;
+    height: 86.1vh;
+    overflow-y: auto;
+}
+
+#main .section .cardContainer::-webkit-scrollbar {
+    background-color: #999;
+    width: 5px;
+}
+
+#main .section .cardContainer::-webkit-scrollbar-thumb {
+    background-color: #666;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-width: 380px;
+    max-width: 380px;
+    height: fit-content;
+}
+
+.place-image {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.details {
+    padding: 20px;
+}
+
+.place-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+.place-location {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.info-value {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.client-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+.client-contact {
+    color: #777;
+    font-size: 14px;
+}
+
+.cancel-button {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+    background-color: #c9302c;
+}
+
+.cancel-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.specialBg{
+    background-color: #f5f5f5;
+}
+
+.nobooks {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    margin: 46px;
+}
+
+.nobooks h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.fa-circle-exclamation {
+    font-size: 48px;
+    color: #f53d3d;
+    margin-bottom: 20px;
+}
+
+.nobooks p {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.nobooks a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nobooks a:hover {
+    text-decoration: underline;
+}

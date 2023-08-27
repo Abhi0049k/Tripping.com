@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Result</title>
-    <link rel="stylesheet" href="./src/css/searchResult.css">
-    <link rel="stylesheet" href="./src/css/navbar.css">
+    <link rel="shortcut icon" type="x-icon" href="./imgs/trip.jpg">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/searchResult.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
+
 <body>
     <nav>
         <div class="brandLogo">
             <img src="./imgs/brand.png" alt="">
         </div>
         <div class="right">
-            <div class="userInfo">
-                <a href="userDashBoard.html">
-                    <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"
-                        data-svg="user">
-                        <circle fill="none" stroke="white" stroke-width="1.1" cx="9.9" cy="6.4" r="4.4"></circle>
-                        <path fill="none" stroke="white" stroke-width="1.1"
-                            d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"></path>
-                    </svg>
-                </a>
-            </div>
+            <a href="#" class="userInfo">
+                <i class="fa-regular fa-user" style="color: #ffffff;"></i>
+            </a>
             <div class="hamburger">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="38px" viewBox="0 0 24 24" width="64px">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" stroke="white" stroke-width='2' />
-                    </svg>
-                </span>
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
             </div>
         </div>
         <div class="login">
-            <p><a href="signup.html">SignUp</a></p>
-            <p><a href="signin.html">SignIn</a></p>
+            <p><a href="signup.html">Sign Up</a></p>
+            <p><a href="signin.html">Sign In</a></p>
         </div>
         <div class="logout">
             <p><a href="#">Signout</a></p>
         </div>
         <div class="hamburgerPart">
-            <span class="clearingHam">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" stroke="silver" stroke-width="2"/>
-                </svg>
-            </span>
+            <i class="fa-solid fa-xmark clearingHam" style="color: #ffffff;"></i>
             <div class="section">
                 <p class="heading">
                     ARE YOU A PROPERTY OWNER/MANAGER?
@@ -77,37 +62,98 @@
         </div>
     </nav>
     <div id="searchResult">
-        <h3></h3>
-        <div id="container">
-
-        </div>
-        <div id="bookingConfirming">
-            <div>
-                <h1>Confirm Booking</h1> 
-                <span class="clearConfirmation">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" stroke="silver" stroke-width="2"/>
-                    </svg>
-                </span>
+        <div id="left">
+            <div class="uppers">
+                <label id="modifyFormBtn">
+                    <i class="fa-regular fa-calendar" style="color: #000000;"></i>
+                    <p>MODIFY SEARCH</p>
+                </label>
             </div>
-            <form>
-                <input type="text" placeholder="Enter your name" id="name">
-                <input type="text" placeholder="Enter your age" id="age">
-                <input type="email" placeholder="Enter your email" id="email">
-                <label for="checkin">Check-in Date</label>
-                <input type="date" id="checkin">
-                <label for="checkout">Check-out Date</label>
-                <input type="date" id="checkout">
-                <input type="number" placeholder="Enter your Aadhar No." id="idProof">
-                <input type="submit" value="Confirm Booking">
-            </form>
+            <div class="lowers">
+                <div class="extras">
+                    <h3></h3>
+                    <label>
+                        Sort By <select id="orderBy">
+                            <option value="">Relevance</option>
+                            <option value="1">Price (Low To High)</option>
+                            <option value="-1">Price (High To Low)</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="errMsg">
+                    <h3>
+                        <i class="fa-solid fa-circle-exclamation" style="color: #f53d3d;"></i>
+                        No home was found matching this requirement
+                    </h3>
+                    <h4>Please try different filters.</h4>
+                </div>
+                <div class="cardContainer">
+                </div>
+            </div>
         </div>
+        <div id="right">
+            <iframe id="locationMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.687603152865!2d73.40660914778711!3d18.767486011152297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be8014f6ac9b871%3A0x578013a6e753cdd2!2sImagica!5e0!3m2!1sen!2sin!4v1692290917276!5m2!1sen!2sin"></iframe>
+            </div>
+        </div>
+    <div id="modifyForm">
+        <form>
+            <h2>Modify Search</h2>
+            <label>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="location" placeholder="Location" required>
+            </label>
+            <div class="dates">
+                <label>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <input type="text" id="checkin" placeholder="Check In" required>
+                </label>
+                <label>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    <input type="text" id="checkout" placeholder="Check Out" required>
+                </label>
+            </div>
+            <label>
+                <select id="qty" required>
+                    <option value="">Select Guests</option>
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="7">7 guests</option>
+                    <option value="8">8 guests</option>
+                    <option value="9">9 guests</option>
+                    <option value="10">10 guests</option>
+                    <option value="11">11 guests</option>
+                    <option value="12">12 guests</option>
+                    <option value="13">13 guests</option>
+                    <option value="14">14 guests</option>
+                    <option value="15">15 guests</option>
+                    <option value="16">16 guests</option>
+                    <option value="17">17 guests</option>
+                    <option value="18">18 guests</option>
+                    <option value="19">19 guests</option>
+                    <option value="20">20 guests</option>
+                    <option value="21">21 guests</option>
+                    <option value="22">22 guests</option>
+                    <option value="23">23 guests</option>
+                    <option value="24">24 guests</option>
+                    <option value="25">25 guests</option>
+                    <option value="26">26 guests</option>
+                </select>
+            </label>
+            <div class="btns">
+                <input type="submit" value="SEARCH">
+                <button type="button" id="closeForm">CANCEL</button>
+            </div>
+        </form>
     </div>
-    <div id="notification">
-    </div>
-    <script src="./src/script/navbar.js"></script>
-    <script src="./src/script/searchResult.js"></script>
+    <script src="https://kit.fontawesome.com/e2f54f564d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./scripts/navbar.js"></script>
+    <script src="./scripts/searchResult.js"></script>
 </body>
+
 </html>
