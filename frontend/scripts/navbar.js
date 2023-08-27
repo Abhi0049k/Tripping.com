@@ -57,7 +57,7 @@ logoutBtn.addEventListener('click', () => {
 
 const loggingUserOut = async () => {
     try {
-        let res = await fetch('http://localhost:8998/user/logout', {
+        let res = await fetch('https://tripping-com.onrender.com/user/logout', {
             headers: {
                 Authorization: `Bearer ${token}`,
                 'Content-type': 'application/json'

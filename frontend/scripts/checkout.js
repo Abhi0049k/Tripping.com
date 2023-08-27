@@ -1,4 +1,4 @@
-const baseServerUrl = 'http://localhost:8998/booking'
+const baseServerUrl = 'https://tripping-com.onrender.com/booking'
 const tn = localStorage.getItem('token') || '';
 const un = localStorage.getItem('username') || '';
 const imgEl = document.querySelector('#imgField');

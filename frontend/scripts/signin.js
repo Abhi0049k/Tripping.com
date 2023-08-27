@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8998/user';
+const baseUrl = 'https://tripping-com.onrender.com/user';
 const email= document.querySelector('form #email');
 const password = document.querySelector('form #password');
 const formEl = document.querySelector('form');

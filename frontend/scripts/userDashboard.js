@@ -1,4 +1,4 @@
-const baseServerUrl = 'http://localhost:8998'
+const baseServerUrl = 'https://tripping-com.onrender.com'
 
 const tk = localStorage.getItem('token') || '';
 const un = localStorage.getItem('username') || '';

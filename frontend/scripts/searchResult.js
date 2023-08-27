@@ -1,4 +1,4 @@
-const baseServerURL = 'http://localhost:8998'
+const baseServerURL = 'https://tripping-com.onrender.com'
 let data = [];
 const currURL = window.location.href;
 
