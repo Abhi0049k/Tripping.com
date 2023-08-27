@@ -1,29 +1,108 @@
-# ready-lock-9044  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-:[Tripping.com](https://nimble-starburst-6bbdd4.netlify.app/):-
-Tripping.com is a clone of [TripVillas](https://www.tripvillas.com/) which is a global rental platform which offers rental properties for vacations.
-Tripping.com is not an exact clone of TripVillas as I have made changes in it that make it a bit different from the original.
-# Tech Stack
-Following is the Tech Stack which I used to build this project
 
-- <img src="https://img.icons8.com/ios-filled/30/000000/html-5--v1.png"/> `HTML` - Hypertext Markup Language, used for creating web pages and web applications.
-- <img src="https://img.icons8.com/ios-filled/30/000000/css3.png"/> `CSS` - Cascading Style Sheets, a stylesheet language used to describe the presentation of a document written in HTML.
-- <img src="https://img.icons8.com/color/30/000000/javascript--v1.png"/> `JavaScript (JS)` - A programming language used to add interactivity and dynamic behaviour to web pages and web applications.
-- <img src="https://img.icons8.com/color/30/000000/nodejs.png"/> `Node.js` - An open-source, cross-platform JavaScript runtime environment that allows developers to build server-side applications using JavaScript.
-- <img src="https://img.icons8.com/color/30/000000/express.png"/> **Express.js** - A popular Node.js web application framework that simplifies building server-side web applications.
-- <img src="https://img.icons8.com/color/30/000000/mongodb.png"/> `MongoDB` - A popular NoSQL database that stores data in flexible, JSON-like documents.
-- <img src="https://img.icons8.com/color/30/000000/mongoose.png"/> `Mongoose` - An Object Data Modeling (ODM) library for MongoDB and Node.js that provides a higher-level abstraction for interacting with MongoDB.
+![Logo](https://nimble-starburst-6bbdd4.netlify.app/imgs/brand.png)
 
-These technologies were chosen for their flexibility, scalability, and ease of use. Together, they allow for the creation of fast and responsive web applications with a robust backend.
 
-## Landing Page
-![landingpage](https://user-images.githubusercontent.com/112062354/229346889-ddcaf6a2-055d-4a32-a3fb-19f074f87a41.png)
-![Screenshot (606)](https://user-images.githubusercontent.com/112062354/229347889-1db2f7d4-084f-4657-992e-a600a929caaf.png)
-## Login Page
-![loginPage](https://user-images.githubusercontent.com/112062354/229347258-d5f4eff8-b889-4e30-b46a-acab0f9d43c0.png)
-## Login Page which will be used by the admin to get loggedIn
-![AdminLogin](https://user-images.githubusercontent.com/112062354/229347363-ef6cfd08-ecdd-4f7c-a520-92c9a08663d8.png)
-## Admin Dashboard
-![AdminDashboard](https://user-images.githubusercontent.com/112062354/229348025-8dbecf5f-fbec-402e-aeeb-b69be020f9bb.png)
-## User Dashboard
-![UserDashboard](https://user-images.githubusercontent.com/112062354/229348132-9295b30e-5a2e-43b8-ad61-f14e168ac64b.png)
-## Search Result And Booking Form
-![SearchResultAndBookingForm](https://user-images.githubusercontent.com/112062354/229348270-06b0c9e2-ae18-403c-aa57-66a161fc4af8.png)
+# Tripping.com  
+
+Your Tripping.com is a clone of TripVillas which is a web-based platform that allows users to discover and book vacation rental properties for their getaways globally. 
+
+
+## Table of Contents
+
+- Contributors
+- Features
+- Tech Stack
+- Screenshots
+- Getting Started
+## Contributors
+
+This is an Individual project built within a span of 8 days.
+## Features
+
+- User Register, Login, logout
+- Booking a Place for Rental
+- Property Listings
+- Property Search
+- Property Details
+- Booking Management
+- Updating User Details
+- Updating User Password
+
+
+
+## Tech Stack
+
+### Frontend:  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7) 
+
+### Backend: ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) ![Render](https://img.shields.io/badge/Render-%235167FF?style=for-the-badge&logo=Render&logoColor=white)
+## Screenshots
+
+
+### Landing Page
+
+![home](https://github.com/Abhi0049k/Talkative-Tribe/assets/112062354/6814251e-7d4b-4e47-847c-a5dd15415912)
+
+
+### Search Results
+
+![searchResults](https://github.com/Abhi0049k/Talkative-Tribe/assets/112062354/0491b03d-3784-43e5-a64e-05cc494c69a5)
+
+
+### Check Out Page
+
+![checkoutPage](https://github.com/Abhi0049k/Talkative-Tribe/assets/112062354/9cfad448-d60f-40f5-a8cd-c30cb1b8feed)
+
+
+### User Dashboard
+
+![allBookings](https://github.com/Abhi0049k/Talkative-Tribe/assets/112062354/108a31fb-4f3b-486e-902d-d70274a2b955)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone git@github.com:Abhi0049k/ready-lock-9044.git
+```
+
+Go to the project directory
+
+```bash
+  cd ready-lock-9044
+```
+
+Then go to backend folder
+```bash
+  cd backend 
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+Now, open a new terminal window or tab to continue with the frontend part.
+
+Navigate to the 'frontend' folder: 
+
+```bash
+  cd ../frontend
+```
+
+In the 'frontend' folder, locate the files containing links that need to be updated.
+
+Replace the existing links with localhost links, taking care to update the appropriate URLs.
+
+Once you've updated the links, save the files.
+
+Now you're ready to test the application locally with the updated links.
+
+
+** Please note that when you switch back to the 'frontend' folder to update the links, you need to ensure that you're using the correct URLs for the local development server.**
